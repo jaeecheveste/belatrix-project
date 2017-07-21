@@ -9,6 +9,14 @@ Main components:
 -upload
 -belatrix-table
 
+You need to insert a txt file with the following format:
+“01 Lima /  / ”
+“01 Lima / 50 Lima / ”
+“01 Lima / 51 Barranca / ”
+“01 Lima / 50 Lima / 202 La Molina”
+
+The program will process it and create depto, provincia and distrito tables.
+
 ## Development server
 Run `npm install` for loading all required packages.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
