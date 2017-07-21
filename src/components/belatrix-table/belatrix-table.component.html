@@ -1,0 +1,20 @@
+<h4 class="table-header">{{type | uppercase}}</h4>
+<div class="table-responsive">
+  <table class="table">
+    <th>Codigo</th>
+    <th>Nombre</th>
+    <th>Codigo Padre</th>
+    <th>Descripcion</th>
+
+    <tr *ngFor="let item of dataSet">
+      <td>{{item.codigo}}</td>
+      <td>{{item.nombre}}</td>
+      <td *ngIf="item.depto || item.provincia, let subItem">{{subItem.codigo}}</td>
+      <td *ngIf="item.depto || item.provincia, let subItem">{{subItem.nombre}}</td>
+      <ng-container *ngIf="type === 'departamento'">
+        <td>-</td>
+        <td>-</td>
+      </ng-container>
+    </tr>
+  </table>
+</div>
